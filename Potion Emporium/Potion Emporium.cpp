@@ -107,7 +107,7 @@ bool buyingPotion(Player& p)
 		{
 			return true;
 		}
-		if (clearFailedExtraction() || hasUnextractedInput() || !(0 <= input <= 3))
+		if (clearFailedExtraction() || hasUnextractedInput() || input > 3 || input < 0)
 		{
 			ignoreLine();
 			std::cout << "\nWe don't have that potion in stock. Please pick the ones available: ";
